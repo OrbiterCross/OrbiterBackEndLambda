@@ -1,0 +1,38 @@
+{
+  "configurations": [
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "scanAChainTransferBChainToken:scanAChainTransferBChainTokenFunction (nodejs12.x)",
+      "invokeTarget": {
+        "target": "template",
+        "templatePath": "scanAChainTransferBChainToken/template.yaml",
+        "logicalId": "scanAChainTransferBChainTokenFunction"
+      },
+      "lambda": {
+        "payload": {
+          "json": {
+          }
+        },
+        "environmentVariables": {}
+      }
+    },
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "scanAChainTransferBChainToken method",
+      "invokeTarget": {
+        "target": "code",
+        "lambdaHandler": "app.lambdaHandler",
+        "projectRoot": "scanAChainTransferBChainToken/hello-world"
+      },
+      "lambda": {
+        "runtime": "nodejs12.x",
+        "payload": {
+          "json": {
+          }
+        }
+      }
+    }
+  ]
+}
